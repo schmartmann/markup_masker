@@ -9,16 +9,16 @@
 require 'roo'
 require 'roo-xls'
 
-ExcelSheet.destroy_all
-Sheet.destroy_all
-Column.destroy_all
 Row.destroy_all
+Column.destroy_all
+Sheet.destroy_all
+ExcelSheet.destroy_all
 
 
 xlsx = Roo::Spreadsheet.open('./db/Textool_Update_April_May_Projects_03312017.xlsx')
 
 @spreadsheet = ExcelSheet.create({
-  name: xlsx.info,
+  name: xlsx.info.split(" ")[1],
   user_id: 1
 })
 

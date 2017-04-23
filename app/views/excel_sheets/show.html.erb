@@ -1,0 +1,8 @@
+<% @excel_sheet.each do |excel| %>
+  <p><%=excel[:name]%></p>
+  <div>
+  <% excel.sheets.each do |sheet| %>
+    <p><%= sheet[:name]%></p>
+  <% end %>
+  </div>
+<% end %>
