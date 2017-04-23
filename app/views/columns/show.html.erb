@@ -2,6 +2,6 @@
   <ul>
   <% @column.rows.each do |row| %>
     <li>Row <%= row[:row_number]%></li>
-    <li><%= row[:raw_text]%></li>
+    <li><%=row[:raw_text]%></li>
   <% end %>
   </ul>
