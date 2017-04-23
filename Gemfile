@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'roo'
+gem 'roo-xls'
 gem 'devise'
 gem 'better_errors'
 

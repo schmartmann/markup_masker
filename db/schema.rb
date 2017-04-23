@@ -10,16 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422165359) do
+ActiveRecord::Schema.define(version: 20170423032026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sheets", force: :cascade do |t|
+  create_table "columns", force: :cascade do |t|
+    t.string   "header"
+    t.integer  "column_number"
+    t.integer  "sheet_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["sheet_id"], name: "index_columns_on_sheet_id", using: :btree
+  end
+
+  create_table "excel_sheets", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_excel_sheets_on_user_id", using: :btree
+  end
+
+  create_table "rows", force: :cascade do |t|
+    t.string   "raw_text"
+    t.integer  "row_number"
+    t.integer  "column_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["column_id"], name: "index_rows_on_column_id", using: :btree
+  end
+
+  create_table "sheets", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "excel_sheet_id"
     t.index ["user_id"], name: "index_sheets_on_user_id", using: :btree
   end
 
@@ -40,4 +67,6 @@ ActiveRecord::Schema.define(version: 20170422165359) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "columns", "sheets"
+  add_foreign_key "rows", "columns"
 end
