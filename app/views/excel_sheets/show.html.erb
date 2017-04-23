@@ -2,7 +2,7 @@
   <p><%=excel[:name]%></p>
   <div>
   <% excel.sheets.each do |sheet| %>
-    <p><%= sheet[:name]%></p>
+    <a href="<%= excel.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
   <% end %>
   </div>
 <% end %>
