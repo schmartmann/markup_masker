@@ -1,7 +1,7 @@
   <p>Column Name: <%= @column[:header] %>
   <ul>
-  <% @column.rows.each do |row| %>
-    <li>Row <%= row[:row_number]%></li>
-    <li><%=row[:raw_text]%></li>
+  <% @rows.each_with_index do |row, index| %>
+    <li>Row <%= index + 1 %></li>
+    <li><%=row%></li>
   <% end %>
   </ul>
