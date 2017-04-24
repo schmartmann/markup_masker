@@ -12,7 +12,6 @@ class ColumnsController < ApplicationController
         }
       )
     end
-    byebug
   end
 
 end
