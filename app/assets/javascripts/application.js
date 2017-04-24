@@ -25,6 +25,7 @@ $(document).ready(function(){
 
   const hideElement = (name) => {
     if (name === "html"){
+      console.log("hiding html");
       html.hide()
     } else {
       rowNumber.hide()

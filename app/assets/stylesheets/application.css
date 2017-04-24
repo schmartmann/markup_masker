@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.navBar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; 
+}
+
+.navBar .navPath, 
+.navBar .authLinks {
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: baseline; 
+}
+
+.authLinks {
+  font-size: 12px; 
+}
+
+.authLinks a {
+  margin-left: 2%;
+}

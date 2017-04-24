@@ -1,0 +1,13 @@
+<div class="navBar">
+  <div class="navPath">
+    <%= link_to "My Files", home_index_path %>
+  </div>
+  <div class="authLinks">
+    <% if current_user.nil?%>
+      <%= link_to "Log In", new_user_session_path%>
+    <% else %>
+      <p>Welcome, <%= current_user.email%></p>
+      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    <% end %>
+  </div>
+</div>
