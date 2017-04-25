@@ -37,3 +37,8 @@
 .authLinks a {
   margin-left: 2%;
 }
+
+
+.flashAlert {
+  color: red;
+}
