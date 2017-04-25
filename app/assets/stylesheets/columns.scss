@@ -36,17 +36,19 @@ nav .radio-container {
     padding-left: 2%;
     margin: 0 auto; 
     width: 90%;
-    display: flex; 
-    flex-flow: row wrap; 
+    // display: flex; 
+    // flex-flow: row wrap; 
   }
 
   code {
-    align-self: center;
+    // align-self: center;
     background: lightgrey;
   }
 
   .text, .code {
-    align-self: baseline;
+    // align-self: baseline;
+    display: inline;
+    font-size: 10px;
   }
 
 }
