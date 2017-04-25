@@ -22,17 +22,16 @@ nav .radio-container {
   width: 100%;
   display: flex; 
   flex-flow: row nowrap;
-  align-items: baseline;
+  align-items: flex-end;
   @extend .border;
 
   .row-number {
     height: 100%;
     width: 1em;
-    align-self: start; 
+    align-self: center;
+    padding-left: 2%;
   }
-
   .text-container {
-    border-left: 1px solid black;
     padding-left: 2%;
     margin: 0 auto; 
     width: 90%;
