@@ -35,6 +35,8 @@ nav .radio-container {
     padding-left: 2%;
     margin: 0 auto; 
     width: 90%;
+    min-height: 4em; 
+    border-left: 1px solid black; 
     // display: flex; 
     // flex-flow: row wrap; 
   }
