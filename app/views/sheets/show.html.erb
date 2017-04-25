@@ -1,5 +1,9 @@
-  <p><%= @sheet[:name] %></p>
-  <% @sheet.columns.each do |column| %>
-    <a href="<%= @sheet.id%>/columns/<%=column.id%>"><%= column[:header]%></a>
-  <% end %>
+  <p>Current File: <%= @sheet.excel_sheet.name %></p>
+  <p>Current Sheet: <%= @sheet[:name] %></p>
+  <div class="columnsList">
+    <p>Columns:</p>
+      <% @sheet.columns.each do |column| %>
+      <a href="<%= @sheet.id%>/columns/<%=column.id%>"><%= column[:header]%></a>
+    <% end %>
 
+  </div>

@@ -15,6 +15,7 @@
  */
 
 .navBar {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; 
@@ -29,6 +30,7 @@
 }
 
 .authLinks {
+  width: 40%;
   font-size: 12px; 
 }
 
