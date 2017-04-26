@@ -1,8 +1,6 @@
 <div class="navBar">
   <div class="navPath">
-    <% if user_signed_in? %>
-      <%= link_to "My Files", home_index_path %>
-    <% end %>
+    <%= breadcrumbs  display_single_fragment:false, link_current: true %>
   </div>
   <div class="authLinks">
     <% if current_user.nil?%>
