@@ -1,5 +1,5 @@
 <% @excel_sheet.each do |excel| %>
-  <p>Current Excel Spreadsheet: <%=excel[:name]%></p>
+  <p><%=excel[:name]%></p>
   <div>
   <% excel.sheets.each do |sheet| %>
     <a href="<%= excel.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
