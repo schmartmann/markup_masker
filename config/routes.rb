@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       end
     end
   end
+  post "excel_sheets/upload", to: "excel_sheets#upload"
   resources :home, only: [:index]
-  root to: "home#index"
+  root "excel_sheets#index" 
 end
