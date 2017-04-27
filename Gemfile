@@ -10,7 +10,7 @@ gem 'roo-xls'
 gem 'devise'
 gem 'better_errors'
 gem 'gretel'
-gem 'ruby-filemagic'
+gem 'mimemagic'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

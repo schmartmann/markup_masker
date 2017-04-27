@@ -1,4 +1,7 @@
 <%= form_for @excel_sheet do |f| %>
-  <%= f.file_field :spreadsheet %>
-    <%= f.submit %>
+<%= f.file_field :spreadsheet %>
+    <% if flash[:filetype]%>
+      <p class="flashAlert"><%= flash[:filetype] %></p>
+    <% end %>
+  <%= f.submit %>
 <% end %>

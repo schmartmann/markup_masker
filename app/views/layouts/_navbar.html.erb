@@ -2,6 +2,7 @@
   <div class="navPath">
     <% if user_signed_in? %>
       <%= link_to "My Files", home_index_path %>
+      <%= link_to "Upload New FIle", new_excel_sheet_path%>
     <% end %>
   </div>
   <div class="authLinks">
