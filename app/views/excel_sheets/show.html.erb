@@ -1,8 +1,6 @@
-<% @excel_sheet.each do |excel| %>
-  <p><%=excel[:name]%></p>
+  <p><%=@excel_sheet[:name]%></p>
   <div>
-  <% excel.sheets.each do |sheet| %>
-    <a href="<%= excel.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
+  <% @excel_sheet.sheets.each do |sheet| %>
+    <a href="<%= @excel_sheet.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
   <% end %>
   </div>
-<% end %>

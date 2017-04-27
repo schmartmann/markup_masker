@@ -8,7 +8,7 @@ class ExcelSheetsController < ApplicationController
   end
 
   def show
-    @excel_sheet = ExcelSheet.where(id: params[:id]).joins(:sheets)
+    @excel_sheet = ExcelSheet.where(id: params[:id]).joins(:sheets).first
   end
 
   def new 

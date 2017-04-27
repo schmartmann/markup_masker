@@ -1,8 +1,6 @@
 <h1>Excel Files</h1>
 <div>
-  <ul>
-    <% @excel_sheets.each do |excel| %>
-      <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
-    <% end %>
-  </ul>
+  <% @excel_sheets.each do |excel| %>
+    <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
+  <% end %>
 </div>
