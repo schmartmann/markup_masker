@@ -18,14 +18,11 @@ class ExcelSheetsController < ApplicationController
   def create 
     spreadsheet = params[:excel_sheet][:spreadsheet]
     xlsx = Roo::Spreadsheet.open(spreadsheet.tempfile)
-    byebug
     @spreadsheet = ExcelSheet.create(
       name: spreadsheet.original_filename,
       user_id: current_user.id
     )
-
     doc_sheets = xlsx.sheets
-
     doc_sheets.each do |sheet|
       @sheet = Sheet.create({
         name: sheet,
