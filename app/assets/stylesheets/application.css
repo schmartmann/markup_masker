@@ -29,6 +29,14 @@
   align-items: baseline; 
 }
 
+
+.navBar .navPath {
+}
+
+.navPath a {
+  padding-right: 10px;
+}
+
 .authLinks {
   width: 40%;
   font-size: 12px; 

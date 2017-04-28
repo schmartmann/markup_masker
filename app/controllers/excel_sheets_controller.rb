@@ -18,8 +18,10 @@ class ExcelSheetsController < ApplicationController
   
   def create 
     spreadsheet = params[:excel_sheet][:spreadsheet]
-    mime_types = MimeMagic.by_magic(File.open(spreadsheet.tempfile))
-    if mime_types.mediatype == "application" && mime_types.subtype == "x-ole-storage" 
+    # mime_types = MimeMagic.by_magic(File.open(spreadsheet.tempfile))
+    # if mime_types.mediatype == "application" && mime_types.subtype == "x-ole-storage" 
+    byebug
+    if spreadsheet.original_filename.split(".")[-1] == "xlsx"
       xlsx = Roo::Spreadsheet.open(spreadsheet.tempfile)
       @spreadsheet = ExcelSheet.create(
         name: spreadsheet.original_filename,

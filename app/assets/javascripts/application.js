@@ -64,4 +64,6 @@ $(document).ready(function(){
   rowHide.click(function(){
     clickHandler(event.target);
   }); 
+
+
 });
