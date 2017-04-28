@@ -1,23 +1,21 @@
-$(document).ready(function(){
-  console.log("hacked"); 
+var ready = function () {
 
-  const html = $(".code");
-  const rowNumber = $(".row-number");
-  const htmlShow = $("#html_show");
-  const htmlHide = $("#html_hidden");
-  const rowShow = $("#row_show");
-  const rowHide = $("#row_hidden"); 
+  var html = $(".code");
+  var rowNumber = $(".row-number");
+  var htmlShow = $("#html_show");
+  var htmlHide = $("#html_hidden");
+  var rowShow = $("#row_show");
+  var rowHide = $("#row_hidden"); 
 
-  const hideElement = (name) => {
+  var hideElement = (name) => {
     if (name === "html"){
-      console.log("hiding html");
       html.hide()
     } else {
       rowNumber.hide()
     }
   }
 
-  const showElement = (name) => {
+  var showElement = (name) => {
     if (name === "html"){
       html.show()
     } else {
@@ -25,7 +23,7 @@ $(document).ready(function(){
     }
   }
 
-  const valCheck = (target) => {
+  var valCheck = (target) => {
     if (target.value === "show") {
       showElement(target.name);
     } else {
@@ -33,7 +31,7 @@ $(document).ready(function(){
     }
   }
 
-  const clickHandler = (target) => {
+  var clickHandler = (target) => {
     valCheck(target);
   }
 
@@ -50,6 +48,7 @@ $(document).ready(function(){
     clickHandler(event.target);
   }); 
 
-  
+};
 
-});
+$(document).ready(ready);
+$(document).on("turbolinks:load", ready);
