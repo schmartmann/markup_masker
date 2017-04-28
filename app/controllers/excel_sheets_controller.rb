@@ -67,6 +67,8 @@ class ExcelSheetsController < ApplicationController
   end
 
   def destroy
+    @excel_sheet.destroy
+    redirect_to "/excel_sheets"
   end
 
   def remove

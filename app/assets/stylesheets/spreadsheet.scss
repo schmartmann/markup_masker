@@ -1,3 +1,49 @@
 // Place all the styles related to the spreadsheet controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+  width: 80%;
+  margin: 0 auto;
+}
+.stream {
+  @extend .header;
+
+    .excelSheetContainer {
+      display: flex; 
+      flex-flow: row nowrap; 
+      justify-content: space-between;
+      align-content: baseline;
+      align-items: center;
+
+      .excelSheetActionLinks {
+        display: flex; 
+        flex-flow: row nowrap; 
+        
+        a {
+          margin: auto 5%;
+        }
+      }
+  }
+}
+
+#newExcelForm {
+  @extend .header; 
+
+  form {
+    margin: 20% auto;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 18px;
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+    align-items: center; 
+    align-content: baseline;
+  }
+  input {
+    margin: 2% auto;
+  }
+  form input[type="submit"] {
+    width: auto;
+  }
+}

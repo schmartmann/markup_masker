@@ -1,9 +1,18 @@
-<h1>Excel Files</h1>
-<div>
-  <% @excel_sheets.each do |excel| %>
-    <div class="excelSheetContainer">
-      <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
-      <%= link_to("Edit", edit_excel_sheet_path(excel)) %>
-    </div>
+<div class="header">
+  <h3><%= current_user.email%>'s spreadsheets:</h3>
+</div>
+<div class="stream">
+  <% if @excel_sheets.length > 0 %>
+    <% @excel_sheets.each do |excel| %>
+      <div class="excelSheetContainer">
+        <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
+        <div class="excelSheetActionLinks">
+          <%= link_to("Edit", edit_excel_sheet_path(excel)) %>
+          <%= link_to "Delete", "/excel_sheets/remove_excel_sheets/#{excel.id}" %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Looks like you haven't uploaded any spreadsheets yet. Click <%= link_to "here", new_excel_sheet_path %> to get started!<p> 
   <% end %>
 </div>
