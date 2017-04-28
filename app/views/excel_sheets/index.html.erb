@@ -1,6 +1,9 @@
 <h1>Excel Files</h1>
 <div>
   <% @excel_sheets.each do |excel| %>
-    <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
+    <div class="excelSheetContainer">
+      <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
+      <%= link_to("Edit", edit_excel_sheet_path(excel)) %>
+    </div>
   <% end %>
 </div>

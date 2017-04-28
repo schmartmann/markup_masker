@@ -1,5 +1,6 @@
 class ExcelSheetsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_excel_sheet, only: [:show, :edit, :update, :destroy, :remove]
   require 'roo'
   require 'roo-xls'
   require 'mimemagic'
@@ -9,7 +10,6 @@ class ExcelSheetsController < ApplicationController
   end
 
   def show
-    @excel_sheet = ExcelSheet.where(id: params[:id]).joins(:sheets).first
   end
 
   def new 
@@ -56,5 +56,26 @@ class ExcelSheetsController < ApplicationController
     end
   end
 
-end
+  def edit
+  end
 
+  def update
+    @excel_sheet.update(
+      name: params[:excel_sheet][:name]
+    )
+    redirect_to "/excel_sheets"
+  end
+
+  def destroy
+  end
+
+  def remove
+  end
+
+  private
+
+  def set_excel_sheet
+    @excel_sheet = ExcelSheet.where(id: params[:id]).joins(:sheets).first
+  end
+
+end

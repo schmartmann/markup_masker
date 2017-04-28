@@ -5,5 +5,8 @@
       <% @sheet.columns.each do |column| %>
       <a href="<%= @sheet.id%>/columns/<%=column.id%>"><%= column[:header]%></a>
     <% end %>
-
   </div>
+
+  <%= link_to "Back", :back %>
+
+
