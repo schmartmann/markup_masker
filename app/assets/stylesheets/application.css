@@ -14,11 +14,38 @@
  *= require_self
  */
 
+/* SHERBET = #E26D5C*/
+/* MINT = #C0E6DE */
+/* LIGHTGREY = #C7D3DD */
+/* WARMGREY = #D6C9C9 */
+/* COOLGREY = ##E8EEF2 */
+
+body {
+  background: #E8EEF2;
+}
+h1,h2,h3,h4,h5,h6,
+p {
+  color: darkslategrey;
+}
+
+a:visited, 
+a {
+  text-decoration: none; 
+  color: #E26D5C;
+}
+
+a:hover {
+  font-weight: 800;
+}
+
 .navBar {
+  height: 3em; 
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; 
+  background: #C0E6DE;
+  padding-right: 0.5%;
 }
 
 .navBar .navPath, 
@@ -31,6 +58,7 @@
 
 
 .navBar .navPath {
+  padding: 1%;
 }
 
 .navPath a {
