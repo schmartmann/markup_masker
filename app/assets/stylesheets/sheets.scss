@@ -2,10 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.sheetsList {
+.sheetActionLinks {
   display: flex; 
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
+  div {
+    @extend .sheetActionLinks;
+    width: 10%;
+    a {
+      margin-right: 1%;
+    }
+  }
+}
+
+
+.sheetsList {
+  @extend .sheetActionLinks; 
   align-items: center; 
 
   a {

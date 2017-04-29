@@ -1,7 +1,8 @@
   <p><%=@excel_sheet[:name]%></p>
   <div class="sheetsList">
   <% @excel_sheet.sheets.each do |sheet| %>
-    <a href="<%= @excel_sheet.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
+      <a href="<%= @excel_sheet.id%>/sheets/<%=sheet.id%>"><%=sheet[:name]%></a>
+    </div>
   <% end %>
   </div>
   <%= link_to "Back", :back %>

@@ -78,3 +78,8 @@ a:hover {
 .flashAlert {
   color: red;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}

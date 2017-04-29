@@ -1,13 +1,7 @@
 // Place all the styles related to the spreadsheet controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.header {
-  width: 80%;
-  margin: 0 auto;
-}
 .stream {
-  @extend .header;
-
     .excelSheetContainer {
       display: flex; 
       flex-flow: row nowrap; 
@@ -27,7 +21,6 @@
 }
 
 #newExcelForm {
-  @extend .header; 
 
   form {
     padding: 1%;
