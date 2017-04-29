@@ -1,19 +1,27 @@
 // Place all the styles related to the sheets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.columnsList {
+
+.sheetsList {
   display: flex; 
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center; 
-  border-bottom: 1px solid black; 
-  border-top: 1px solid black;  
+
   a {
     border-right: 1px solid black;
     margin: 0 auto; 
     padding-left: 2%;
     padding-right: 2%;
   }
+}
+
+
+
+.columnsList {
+  @extend .sheetsList;
+  border-bottom: 1px solid black; 
+  border-top: 1px solid black;  
 }
 
 
