@@ -3,16 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .stream {
     .excelSheetContainer {
-      display: flex; 
-      flex-flow: row nowrap; 
+      display: flex;
+      flex-flow: row nowrap;
       justify-content: space-between;
       align-content: baseline;
       align-items: center;
 
       .excelSheetActionLinks {
-        display: flex; 
-        flex-flow: row nowrap; 
-        
+        display: flex;
+        flex-flow: row nowrap;
+
         a {
           margin: auto 5%;
         }
@@ -21,25 +21,21 @@
 }
 
 #newExcelForm {
-
-  form {
-    padding: 1%;
-    margin: 10% auto;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 18px;
-    display: flex; 
-    flex-flow: row wrap; 
-    justify-content: flex-start;
-    align-items: center; 
-    align-content: baseline;
-  }
+  display: flex; 
+  flex-flow: column nowrap;
   input {
     margin: 2% auto;
   }
   form input[type="submit"] {
     width: auto;
   }
+}
+
+.instructions {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  display: flex; 
+  flex-flow: column nowrap; 
 }
 
 .excelSheetEditForm {

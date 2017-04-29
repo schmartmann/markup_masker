@@ -5,8 +5,8 @@
   <div class="sheetActionLinks">
       <p>Current Sheet: <%= @sheet[:name] %></p>
       <div>
-        <%= link_to "Edit", "/excel_sheet/#{@sheet.excel_sheet.id}/sheets/#{@sheet.id}/edit" %>
-        <%= link_to "Delete", "/excel_sheet/#{@sheet.excel_sheet.id}/sheets/#{@sheet.id}/edit" %>
+        <%= link_to "Edit", edit_excel_sheet_sheet_path %>
+        <%= link_to "Delete", "/excel_sheets/#{@sheet.excel_sheet.id}/sheets/#{@sheet.id}/", data: {confirm: "Are you sure you want to delete this sheet?"}, method: :delete %> 
       </div>
   </div>
     <div class="columnsList">

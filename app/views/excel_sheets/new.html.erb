@@ -1,4 +1,8 @@
 <div id="newExcelForm">
+  <div class="instructions">
+    <p>Upload new Excel spreadsheet.</p>
+    <strong>Must be in <i>.xlsx</i> format </strong>
+  </div>
   <%= form_for @excel_sheet do |f| %>
   <%= f.file_field :spreadsheet %>
       <% if flash[:filetype]%>
@@ -12,3 +16,4 @@
 </div>
 <%= link_to "Back", "/excel_sheets" %>
 <%= javascript_include_tag params[:controller] %>
+

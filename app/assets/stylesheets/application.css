@@ -28,9 +28,9 @@ p {
   color: darkslategrey;
 }
 
-a:visited, 
+a:visited,
 a {
-  text-decoration: none; 
+  text-decoration: none;
   color: #E26D5C;
 }
 
@@ -39,21 +39,21 @@ a:hover {
 }
 
 .navBar {
-  height: 3em; 
+  height: 3em;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between; 
+  justify-content: space-between;
   background: #C0E6DE;
   padding-right: 0.5%;
 }
 
-.navBar .navPath, 
+.navBar .navPath,
 .navBar .authLinks {
-  display: flex; 
+  display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  align-items: baseline; 
+  align-items: baseline;
 }
 
 
@@ -67,7 +67,7 @@ a:hover {
 
 .authLinks {
   width: 40%;
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 .authLinks a {
@@ -82,4 +82,17 @@ a:hover {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+form {
+    padding: 2%;
+    margin: 1% auto;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 18px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: baseline;
 }

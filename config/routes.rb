@@ -8,8 +8,6 @@ Rails.application.routes.draw do
       end
     end
   end
-  post "excel_sheets/upload", to: "excel_sheets#upload"
-  get "excel_sheets/remove_excel_sheets/:id", to: "excel_sheets#remove"
   resources :home, only: [:index]
   root "excel_sheets#index" 
 end

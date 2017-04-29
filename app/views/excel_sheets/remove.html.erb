@@ -1,7 +1,0 @@
-<%= form_for @excel_sheet, method: :delete do |f| %>
-  <div>
-    <p>Delete <%= @excel_sheet[:name]%>?</p>
-    <%= f.submit "Delete Spreadsheet" %>
-    <%= link_to "Back", "/excel_sheets/#{@excel_sheet.id}/edit" %>
-  </div>
-<% end %>

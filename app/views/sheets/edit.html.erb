@@ -1,0 +1,7 @@
+<div class="sheetEditForm">
+  <%= form_for (:sheet) do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+    <%= f.submit "Update Sheet Name" %>
+  <% end %>
+</div>

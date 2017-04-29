@@ -8,8 +8,7 @@
         <%= link_to(excel[:name], excel_sheet_path(excel)) %> 
         <div class="excelSheetActionLinks">
           <%= link_to("Edit", edit_excel_sheet_path(excel)) %>
-          <%= link_to "Delete", "/excel_sheets/remove_excel_sheets/#{excel.id}" %>
-
+          <%= link_to "Delete", "excel_sheets/#{excel.id}", data: {confirm: "Are you sure you want to delete this spreadsheet?"}, method: :delete %>
         </div>
       </div>
     <% end %>
