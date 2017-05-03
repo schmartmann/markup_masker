@@ -3,7 +3,6 @@ class ExcelSheetsController < ApplicationController
   before_action :set_excel_sheet, only: [:show, :edit, :update, :destroy, :remove]
   require 'roo'
   require 'roo-xls'
-  require 'mimemagic'
 
   def index
     @excel_sheets = ExcelSheet.all.where(user_id: current_user.id)

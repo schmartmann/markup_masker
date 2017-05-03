@@ -3,12 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sheetActionLinks {
-  display: flex; 
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: baseline;
   div {
-    @extend .sheetActionLinks;
     width: 10%;
     a {
       margin-right: 1%;
@@ -18,21 +13,11 @@
 
 
 .sheetsList {
-  @extend .sheetActionLinks; 
-  align-items: center; 
-
-  a {
-    border-right: 1px solid black;
-    margin: 0 auto; 
-    padding-left: 2%;
-    padding-right: 2%;
-  }
 }
 
 
 
 .columnsList {
-  @extend .sheetsList;
   border-bottom: 1px solid black; 
   border-top: 1px solid black;  
 }
