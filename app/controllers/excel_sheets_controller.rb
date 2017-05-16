@@ -5,7 +5,10 @@ class ExcelSheetsController < ApplicationController
   require 'roo-xls'
 
   def index
-    @excel_sheets = ExcelSheet.all.where(user_id: current_user.id)
+    excel_sheets = ExcelSheet.all.where(user_id: current_user.id)
+    if excel_sheets
+      @excel_sheets = excel_sheets
+    end
   end
 
   def show
