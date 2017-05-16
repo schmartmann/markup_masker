@@ -1,8 +1,8 @@
-var ready = () => {
+var ready = function(){
 
   var form = $("form"); 
 
-  var loader = () =>{
+  var loader = function(){
     if (form.children().length < 5) {
       form.append("<h6>Uploading file...</h6>");
     }

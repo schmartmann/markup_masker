@@ -7,7 +7,7 @@ var ready = function () {
   var rowShow = $("#row_show");
   var rowHide = $("#row_hidden"); 
 
-  var hideElement = (name) => {
+  var hideElement = function(name){
     if (name === "html"){
       html.hide()
     } else {
@@ -15,7 +15,7 @@ var ready = function () {
     }
   }
 
-  var showElement = (name) => {
+  var showElement = function(name){
     if (name === "html"){
       html.show()
     } else {
@@ -23,7 +23,7 @@ var ready = function () {
     }
   }
 
-  var valCheck = (target) => {
+  var valCheck = function(target){
     if (target.value === "show") {
       showElement(target.name);
     } else {
@@ -31,7 +31,7 @@ var ready = function () {
     }
   }
 
-  var clickHandler = (target) => {
+  var clickHandler = function(target){
     valCheck(target);
   }
 
