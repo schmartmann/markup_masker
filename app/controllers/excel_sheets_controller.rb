@@ -17,7 +17,8 @@ class ExcelSheetsController < ApplicationController
   
   def create 
     spreadsheet = params[:excel_sheet][:spreadsheet]
-    if spreadsheet.original_filename.split(".")[-1] == "xlsx"
+    file_extension = spreadsheet.original_filename.split(".")[-1] 
+    if file_extension == "xlsx" || file_extension == "xls"
       xlsx = Roo::Spreadsheet.open(spreadsheet.tempfile)
       @spreadsheet = ExcelSheet.create(
         name: spreadsheet.original_filename,
