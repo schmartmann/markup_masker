@@ -4,7 +4,8 @@ module ColumnsHelper
       tagsRegExp = /(<\/?\w+(?:(?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>)/
       nbspsRegExp = /(&nbsp;)/
       jsRegExp = /(function.*?})/
-      @regex = Regexp.union(nbspsRegExp, tagsRegExp, jsRegExp)
+      templateExp = /({.*?})/
+      @regex = Regexp.union(nbspsRegExp, tagsRegExp, jsRegExp, templateExp)
       unless html.nil?
         @text_arr = html.split(@regex)
       end
